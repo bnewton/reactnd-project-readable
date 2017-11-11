@@ -1,29 +1,30 @@
 import React, { Component } from 'react';
-import * as CategoriesAPI from '../utils/CategoriesAPI'
+import * as PostsAPI from '../utils/PostsAPI'
 import { Link } from 'react-router-dom'
 
 
 class Index extends Component {
 
     state = {
-        categories: []
+        categories: [],
+        posts: []
     }
 
     componentDidMount() {
-        CategoriesAPI.getAll().then((categories) => {
-            this.setState({categories})
+        PostsAPI.getAll().then((posts) => {
+            this.setState({posts})
         })
     }
 
     render() {
-
-        console.log(this.state.categories);
-        
         return(
             <div>
-            {this.state.categories.map((category) => (
-                <p key={category.path}><Link to={`${category.path}/posts`}>{category.name}</Link></p>
-            ))}
+            {this.state.posts.map((posts) => (
+               <div key={posts.id} className="">
+              <h5><Link className="postsTitle" to={`/posts/${posts.id}`}> {posts.title} <span className="sr-only">(current)</span></Link></h5>
+              <p className="postDetails"> {posts.voteScore} votes | category: {posts.category} | {posts.commentCount} comments</p>
+              </div>
+            ))}     
             </div>
         )
     }    

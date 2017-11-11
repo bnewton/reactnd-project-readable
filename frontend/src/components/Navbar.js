@@ -13,7 +13,10 @@ class Navbar extends Component {
               <Link className="navbar-brand" to="/">Readable</Link>
               <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li className="nav-item active">
-                  <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
+                  <Link className="nav-link" to="/">home <span className="sr-only">(current)</span></Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/">submit <span className="sr-only">(current)</span></Link>
                 </li>
                 <li className="nav-item">
                   {/* <Link className="nav-link" to="/category">Category</Link> */}
