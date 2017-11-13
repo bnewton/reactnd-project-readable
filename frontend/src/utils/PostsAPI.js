@@ -14,4 +14,6 @@ export const getAll = () =>
   fetch(`${api}/posts`, {headers})
   .then(res => res.json())
 
-
+export const getPostById = (Id) =>
+  fetch(`${api}/posts/${Id}`, {headers})
+  .then(res => res.json())
