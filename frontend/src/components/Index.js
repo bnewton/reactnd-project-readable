@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import * as PostsAPI from '../utils/PostsAPI'
 import { Link } from 'react-router-dom'
 
-
 class Index extends Component {
 
     state = {

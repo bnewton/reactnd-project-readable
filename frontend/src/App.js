@@ -25,8 +25,8 @@ class App extends Component {
                 <Category/>
               )}/>
 
-              <Route exact path="/posts/:id" render={() => (
-                <PostDetail/>
+              <Route exact path="/posts/:id" render={(posts) => (
+                <PostDetail posts={posts} />
               )}/>
           </div>
         </div>

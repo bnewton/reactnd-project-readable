@@ -14,6 +14,10 @@ export const getAll = () =>
   fetch(`${api}/posts`, {headers})
   .then(res => res.json())
 
-export const getPostById = (Id) =>
-  fetch(`${api}/posts/${Id}`, {headers})
+export const getPostById = (id) =>
+  fetch(`${api}/posts/${id}`, {headers})
+  .then(res => res.json())
+
+  export const getAllCommentsForPost = (id) =>
+  fetch(`${api}/posts/${id}/comments`, {headers})
   .then(res => res.json())

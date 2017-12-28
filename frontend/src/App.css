@@ -21,3 +21,13 @@ h5 {
     color: #898989;
     font-size: 13px;
 }
+
+.commentBody{
+    font-size: 14px;
+}
+
+.commentDetails{
+    font-size: 12px;
+    font-weight: bold;
+    color: #898989;
+}
